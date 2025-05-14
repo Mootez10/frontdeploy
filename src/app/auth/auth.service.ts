@@ -4,7 +4,7 @@ import { jwtDecode } from 'jwt-decode';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private baseUrl = 'http://localhost:7000/api/auth';
+  private baseUrl = 'https://hospitalmanagement-lv8k.onrender.com/api/auth';
 
   constructor(private http: HttpClient) {}
 
