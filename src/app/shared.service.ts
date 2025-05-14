@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SharedService {
-  private url = 'http://localhost:7000/api'; 
+  private url = 'https://hospitalmanagement-lv8k.onrender.com/api';
 
   constructor(private http: HttpClient) { }
 
@@ -14,7 +14,7 @@ export class SharedService {
   addUser(data: any): Observable<any> {
     return this.http.post(`${this.url}/user/add`, data);
   }
- 
+
   getAllUsers(): Observable<any[]> {
     return this.http.get<any[]>(`${this.url}/user/getAllUsers`);
   }
